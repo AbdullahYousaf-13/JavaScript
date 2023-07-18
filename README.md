@@ -1,7 +1,5 @@
 # JavaScript
-<br>
-<br>
-<br>
+<br><br><br>
 
 ## Theory
 <br>
@@ -15,11 +13,17 @@
 ### JS
     Adds behaviour and interactivity
 
+<br><br>
+
+### USing Chrome Developer Tools
+
+To Open: Ctrl+F12
+![Alt text](image-1.png)
+
 ---
 ---
 
-<br>
-<br>
+<br><br>
 
 ## Codes
 <br>
@@ -44,6 +48,7 @@
 
     </html>
 
+---
 <br>
 
 ### Using another file for script
@@ -63,7 +68,7 @@
 
             <h1>JS for biginners</h1>
             
-            <div id="contet">
+            <div id="content">
                 <p>blah blah blah</p>
             </div>
 
@@ -75,3 +80,42 @@
 
 #### test.js
     alert("Hello, World!");
+
+---
+<br>
+
+
+### 
+
+#### index.html
+
+
+#### test.js
+    
+
+---
+<br>
+
+
+### 
+
+#### index.html
+
+
+#### test.js
+    
+
+---
+<br>
+
+
+### 
+
+#### index.html
+
+
+#### test.js
+    
+
+---
+<br>

@@ -1,7 +1,10 @@
 # JavaScript
+<br>
+<br>
+<br>
 
 ## Theory
----
+<br>
 
 ### Html
     Controls structure of your web page.
@@ -12,12 +15,15 @@
 ### JS
     Adds behaviour and interactivity
 
+---
+---
 
----
----
+<br>
+<br>
 
 ## Codes
----
+<br>
+
 ### Hello World
 
     <!-- <!DOCTYPE html> -->
@@ -37,6 +43,8 @@
         </body>
 
     </html>
+
+<br>
 
 ### Using another file for script
 

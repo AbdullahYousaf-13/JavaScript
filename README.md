@@ -1,4 +1,5 @@
 # JavaScript
+---
 <br><br><br>
 
 ## Theory
@@ -13,11 +14,17 @@
 ### JS
     Adds behaviour and interactivity
 
+### Key Points
+
+#### Variables
+
 <br><br>
+
+
 
 ### USing Chrome Developer Tools
 
-To Open: Ctrl+F12
+    To Open: Ctrl+F12
 ![Alt text](image-1.png)
 
 ---
@@ -25,10 +32,14 @@ To Open: Ctrl+F12
 
 <br><br>
 
-## Codes
+
+
+## Codes With Explanations
 <br>
 
 ### Hello World
+
+#### Code
 
     <!-- <!DOCTYPE html> -->
     
@@ -51,9 +62,13 @@ To Open: Ctrl+F12
 ---
 <br>
 
+
+
 ### Using another file for script
 
-#### index.html
+#### Code
+
+##### index.html
 
     <!DOCTYPE html>
 
@@ -78,44 +93,55 @@ To Open: Ctrl+F12
 
     </html>
 
-#### test.js
+##### test.js
     alert("Hello, World!");
 
 ---
 <br>
 
 
+
 ### 
 
-#### index.html
+#### Code
+
+##### index.html
 
 
-#### test.js
+##### test.js
     
 
 ---
 <br>
 
 
+
 ### 
 
-#### index.html
+#### Code
+
+##### index.html
 
 
-#### test.js
+##### test.js
     
 
 ---
 <br>
 
 
+
 ### 
 
-#### index.html
+#### Code
+
+##### index.html
 
 
-#### test.js
+##### test.js
     
 
 ---
 <br>
+
+

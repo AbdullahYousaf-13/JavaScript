@@ -102,6 +102,21 @@
 
 
 
+### Logging to Console
+
+#### Explanation
+
+- `document.write(myVar2)` or `document.write("AB"+0+7)`
+(Writes on Document/Page)
+
+- `console.log(myVar2)`
+AB (Writes to console)
+
+---
+<br>
+
+
+
 ### Variables
 
 #### Code
@@ -142,7 +157,7 @@
 
 #### Explanation
 
-- No req for specifying dataTypes
+- No req for specifying data types
 - Has dynamic types as it can change
 
 ---
@@ -277,21 +292,6 @@
 
 
 
-### Logging to Console
-
-#### Explanation
-
-- `document.write(myVar2)` or `document.write("AB"+0+7)`
-(Writes on Document/Page)
-
-- `console.log(myVar2)`
-AB (Writes to console)
-
----
-<br>
-
-
-
 ### Booleans
 
 #### Code
@@ -332,17 +332,6 @@ AB (Writes to console)
 
 #### Code
 
-##### index.html
-
-    <!DOCTYPE html>
-
-    <html>  
-        <body>
-            <script src="test.js"> </script>
-
-        </body>
-    </html>
-
 ##### test.js
 
     var youLikeMeat = true;
@@ -357,6 +346,86 @@ AB (Writes to console)
     else{
         document.write("myNum is equal to yourNum");
     }
+
+---
+<br>
+
+
+
+### Loops
+
+#### While Loop Code
+
+##### test.js
+    
+    var myAge = 21;
+    while (myAge<25){
+        document.write("Your age is less then 21");
+        document.write("<br>");
+        myAge++;
+    }
+    document.write("Your are now 21");
+
+#### For Loop Code
+
+##### test.js
+
+    for (i=1; i<=5; i++){
+    console.log(i);
+    }
+    console.log("All links looped");
+
+#### Practical Example for Loop Code
+
+##### index.html
+    <!DOCTYPE html>
+
+    <html>  
+        <body>
+            <a href="Images/image.png">Link 1</a>
+            <a href="Images/image.png">Link 2</a>
+            <a href="Images/image.png">Link 3</a>
+            <a href="Images/image.png">Link 4</a>
+            <a href="Images/image.png">Link 5</a>
+            <a href="Images/image.png">Link 6</a>
+            <script src="test.js"> </script>
+        </body>
+    </html>
+
+##### test.js
+
+    var links = document.getElementsByTagName("a");
+
+    for(i=0; i<links.length; i++){
+    links[i].className = "Link-" + i;
+    }
+
+---
+<br>
+
+
+
+### Break & Continue
+
+#### Code
+
+##### test.js
+    for (i=1; i<=10; i++){
+        if(i===2 || i===4){
+            continue;
+        }
+    if(i===6){
+        break;
+    }
+    console.log(i);
+    }
+    console.log("Broken out of the loop");
+
+#### Explanation
+
+- `break` breaks you out of the loop completely
+
+- `continue` just skips the specified iteration
 
 ---
 <br>

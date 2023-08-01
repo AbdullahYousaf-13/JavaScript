@@ -1,8 +1,5 @@
-var myAge = 21;
+var links = document.getElementsByTagName("a");
 
-if (myAge >=18 && myAge <= 30){
-    document.write("You can come, you cool dude");
-}
-else{
-    document.write("You aint comming!");
+for(i=0; i<links.length; i++){
+    links[i].className = "Link-" + i;
 }

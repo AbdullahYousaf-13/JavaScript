@@ -16,7 +16,13 @@
 
 ### Key Points
 
-#### Variables
+- Methods/Functions/Behaviours:
+    - Have `()` at the end
+    - Parameters can be added in `()`
+    - Eg: `myCar.drive()`
+- Properties:
+    - Bits of info about car
+    - Eg: `myCar.maxspeed`
 
 <br><br>
 
@@ -158,6 +164,7 @@ AB (Writes to console)
 #### Explanation
 
 - No req for specifying data types
+
 - Has dynamic types as it can change
 
 ---
@@ -696,6 +703,142 @@ Output:
 
 
 
+### Arrays 
+
+#### Code
+
+
+    //Declaring and initializing arrays
+
+    //Way_1
+
+    var myArray_1 = [];
+    undefined
+
+    myArray_1[0] = 0;
+    0
+
+    myArray_1[1]= "zero";
+    'zero'
+
+    myArray_1[2]= false;
+    false
+
+    myArray_1
+    (3) [0, 'zero', false]    
+
+    console.log(myArray_1);
+    (3) [0, 'zero', false]
+
+    myArray_1[2]=true;
+    true
+
+    myArray_1
+    (3) [0, 'zero', true]
+
+
+    //Way_2
+    
+    var myArray_2 = [1, "one", true];
+    undefined
+
+    myArray_2
+    (3) [1, 'one', true]
+
+
+    //Way_3
+    
+    var myArray_3 = new Array(5);
+
+
+    //Mthods that we use in Arrays
+    
+    myArray_2.length
+    3
+
+    myArray_2.sort();
+    (3) [1, 'one', true]
+
+    myArray_2.reverse();
+    (3) [true, 'one', 1]
+
+#### Explanation
+
+- JS is `0` based language so array starts with `0` 
+
+- Can store different datatypes in an array
+
+- Array can be updated
+
+- Using 3rd method we can specify no of slots of the array
+
+---
+<br>
+
+
+
+### Creating Objects
+
+#### Code
+
+    //Way-1
+
+    var myString_1 = new String();
+    undefined
+
+    myString_1 = "hello";
+    'hello'
+
+    myString_1.length;
+    5
+
+    myString_1.toUpperCase();
+    'HELLO'
+
+
+    //Way-2 (Short)
+
+    var myString_2 = "hi there";
+    undefined
+
+    myString_2.length;
+    8
+
+##### test.js
+
+    Creating a new Object
+    //Way-1
+
+    var myCar_1 = new Object();
+    myCar_1.maxSpeed=180;
+    myCar_1.driver="AB";
+
+    console.log(myCar_1.maxSpeed);
+    console.log(myCar_1.driver);
+
+    myCar_1.drive = function(){console.log("Now Driving");};
+    myCar_1.drive();
+
+
+    //Way-2 (Short)
+
+    var myCar_2 = {
+        maxSpeed: 200,
+        driver: "DK",
+        drive: function(speed, time) {
+            console.log(speed*time);
+        }
+    };
+
+    console.log(myCar_2.maxSpeed);
+    console.log(myCar_2.driver);
+    myCar_2.drive(180, 3);
+
+---
+<br>
+
+
+
 ### 
 
 #### Code
@@ -708,3 +851,50 @@ Output:
 
 ---
 <br>
+
+
+
+### 
+
+#### Code
+
+##### index.html
+
+
+##### test.js
+    
+
+---
+<br>
+
+
+
+### 
+
+#### Code
+
+##### index.html
+
+
+##### test.js
+    
+
+---
+<br>
+
+
+
+### 
+
+#### Code
+
+##### index.html
+
+
+##### test.js
+    
+
+---
+<br>
+
+

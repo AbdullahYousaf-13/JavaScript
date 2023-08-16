@@ -834,6 +834,16 @@ Output:
     console.log(myCar_2.driver);
     myCar_2.drive(180, 3);
 
+Output:
+
+- 180
+- AB
+- Now Driving
+<br><br>
+- 200
+- DK
+- 540
+
 ---
 <br>
 

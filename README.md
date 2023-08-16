@@ -432,30 +432,264 @@ AB (Writes to console)
 
 
 
-### 
+### Functions
 
 #### Code
 
-##### index.html
+##### test.js
+    function getAvg (a,b) {
+        var avg = (a+b)/2;
+        console.log(avg);
+        return avg;
+    }
+    var result = getAvg(7,12);
+    document.write("Result is " + result);
 
+---
+<br>
+
+ 
+
+### Variable Scope
+
+#### Code
 
 ##### test.js
-    
+    function getAvg (a,b) {
+        var avg = (a+b)/2; //Local Var
+        console.log(avg);
+        return avg;
+    }
+    var result = getAvg(7,12); //Global Var
+    document.write("Result is " + result);
+
+#### Explanation
+
+- Global: Can be used anywhere in the code
+
+- Local: Can be used only in the specific block code
 
 ---
 <br>
 
 
 
-### 
+### Numbers
 
 #### Code
 
-##### index.html
+##### test.js
+    var a = 5;
+    var b = 5;
+    console.log(a+b);
+Output: 
+- 7
 
+<br>
+
+    var a = "5";
+    var b = 5;
+    console.log(a+b);
+    console.log(typeof(a+b));
+
+Outputs:
+- 55
+- string
+
+<br>
+
+    //Math Objects
+    console.log(Math.round(7.5));
+    console.log(Math.floor(7.5));
+    console.log(Math.ceil(7.5));
+    console.log(Math.max(7,5,9,6,4));
+    console.log(Math.min(7,5,9,6,4));
+    console.log(Math.PI);
+
+Outputs:
+- 8
+- 7
+- 8
+- 9
+- 4
+- 3.141592653589793
+
+<br>
+
+#### Explanation
+
+- Black color represents Strings
+
+- Blue color represents Numbers
+
+---
+<br>
+
+
+
+### NaN
+
+#### Code
 
 ##### test.js
+    var a = "5";
+    var b = 5;
+    console.log(a*b);
+
+Output:
+- 25
+
+<br>
+
+    var a = 5;
+    var b = "apples";
+    console.log(a*b);
+
+Output:
+- NaN
+
+<br>
+
+    var a = "apples";
+    var b = 5;
+
+    if(isNaN(a)){
+        console.log("That ain't a no");
+    }
+    else{
+        console.log(a*b + " is a no");
+    }
+
+Output:
+- That ain't a no
+
+<br>
+
+    var a = "apples";
+    var b = 5;
+
+    if(isNaN(a)){
+        console.log("That ain't a no");
+    }
+    else{
+        console.log(a*b + " is a no");
+    }
+
+Output:
+- 25 is a no
+
+---
+<br>
+
+
+
+### Strings
+
+#### Code
+
+##### test.js
+    var str1 = "I am x 'function-1' string";
+    console.log(str1);
+    var str2 = 'I am "function-2" string';
+    console.log(str2);
+    var str3 = "I\'m 'function-3' string";
+    console.log(str3);
     
+    //Properties of Strings
+    console.log(str1.length);
+
+    //Functions of String
+    console.log(str1.toUpperCase(str1));
+    console.log(str1.indexOf("string"));
+
+    if(str1.indexOf("x") === -1){
+        console.log("The letter 'x' is not in the string");
+    }
+    else{
+        console.log("The letter 'x' starts at position " + str1.indexOf("x"));
+    }
+
+Output:
+- I am x 'function-1' string
+- I am "function-2" string
+- I'm 'function-3' string
+<br><br>
+- 26
+<br><br>
+- I AM X 'FUNCTION-1' STRING
+- 20
+<br><br>
+- The letter 'x' starts at position 5
+
+<br>
+
+    //Comparing Strings
+    var str4 = "abc";
+    var str5 = "ABC";
+    console.log(str4===str5);
+    console.log(str4.toLowerCase===str5.toLowerCase);
+
+    console.log(str4<str5);
+    console.log(str4>str5);
+
+    var str6 = "abc";
+    var str7 = "bcd";
+    console.log(str6<str7);
+    console.log(str6>str7);
+
+Output:
+- false
+- true
+<br><br>
+- false
+- true
+<br><br>
+- true
+- false
+
+#### Explanation
+
+- Lower case letters are greater in JS
+
+- Upper case letters are smaller in JS
+
+
+---
+<br>
+
+
+
+### Slice an Split Methods of Strings
+
+#### Code
+   
+    //Slice
+    var str1 = "hello, world"
+    undefined
+    str1
+    'hello, world'
+
+    var str2 = str1.slice(0,5)
+    undefined
+    str2
+    'hello'
+
+    var str3 = str.slice(7)
+    undefined
+    str3
+    'world'
+    
+<br>
+
+    //Split
+    var tags = "meat, beef, chicken";
+    undefined
+    tags
+    'meat, beef, chicken'
+    var tagsArray = tags.split(",");
+    undefined
+    tagsArray
+    (3) ['meat', ' beef', ' chicken']
 
 ---
 <br>

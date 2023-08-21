@@ -489,7 +489,7 @@ AB (Writes to console)
     var a = 5;
     var b = 5;
     console.log(a+b);
-Output: 
+##### Output: 
 - 7
 
 <br>
@@ -499,7 +499,7 @@ Output:
     console.log(a+b);
     console.log(typeof(a+b));
 
-Outputs:
+##### Output:
 - 55
 - string
 
@@ -513,7 +513,7 @@ Outputs:
     console.log(Math.min(7,5,9,6,4));
     console.log(Math.PI);
 
-Outputs:
+##### Output:
 - 8
 - 7
 - 8
@@ -543,7 +543,7 @@ Outputs:
     var b = 5;
     console.log(a*b);
 
-Output:
+##### Output:
 - 25
 
 <br>
@@ -552,7 +552,7 @@ Output:
     var b = "apples";
     console.log(a*b);
 
-Output:
+##### Output:
 - NaN
 
 <br>
@@ -567,7 +567,7 @@ Output:
         console.log(a*b + " is a no");
     }
 
-Output:
+##### Output:
 - That ain't a no
 
 <br>
@@ -582,7 +582,7 @@ Output:
         console.log(a*b + " is a no");
     }
 
-Output:
+##### Output:
 - 25 is a no
 
 ---
@@ -616,7 +616,7 @@ Output:
         console.log("The letter 'x' starts at position " + str1.indexOf("x"));
     }
 
-Output:
+##### Output:
 - I am x 'function-1' string
 - I am "function-2" string
 - I'm 'function-3' string
@@ -644,7 +644,7 @@ Output:
     console.log(str6<str7);
     console.log(str6>str7);
 
-Output:
+##### Output:
 - false
 - true
 <br><br>
@@ -834,7 +834,7 @@ Output:
     console.log(myCar_2.driver);
     myCar_2.drive(180, 3);
 
-Output:
+##### Output:
 
 - 180
 - AB
@@ -849,45 +849,190 @@ Output:
 
 
 
-### 
+### `this` Keyword 
 
 #### Code
 
-##### index.html
-
-
 ##### test.js
-    
+    var myCar_1 = {
+        maxSpeed: 200,
+        driver: "DK",
+        drive: function(speed, time) {
+            console.log(speed*time);
+        },
+        test: function(){
+            console.log(myCar_1);
+        },
+        logDriver: function(){
+            console.log("Driver Name: " + this.driver);
+        }
+    };
+
+    var myCar_2 = {
+        maxSpeed: 200,
+        driver: "AB",
+        drive: function(speed, time) {
+            console.log(speed*time);
+        },
+        test: function(){
+            console.log(this);
+        }
+    };
+
+    console.log(myCar_1.maxSpeed);
+    console.log(myCar_1.driver);
+    myCar_1.drive(180, 3);
+    myCar_1.test();
+    myCar_2.test();
+    myCar_1.logDriver();
+  
+#### Explanation
+
+- Keyword `this` refers to the object in which it is used
+
+- Can also use the name of the object instead of `this` keyword but you would have to change name at every different object
+
+- Good for creating constructor functions
 
 ---
 <br>
 
 
 
-### 
+### Constructor Functions
 
 #### Code
 
-##### index.html
-
-
 ##### test.js
-    
+    var Car = function(maxSpeed, driver){
+        this.maxSpeed = maxSpeed;
+        this.driver = driver;
+        this.drive = function(speed, time) {
+            console.log(speed*time);
+        };
+        this.logDriver = function(){
+            console.log("Driver Name: " + this.driver);
+        };
+    }
+
+    var myCar_1 = new Car (200, "DK-1");
+    var myCar_2 = new Car (190, "DK-2");
+    var myCar_3 = new Car (180, "DK-3");
+    var myCar_4 = new Car (170, "DK-4");
+
+    console.log(myCar_1.maxSpeed);
+    myCar_1.drive(200, 5);
+    myCar_1.logDriver();
+
+    console.log(myCar_2.maxSpeed);
+    myCar_2.drive(190, 5);
+    myCar_2.logDriver();
+
+    console.log(myCar_3.maxSpeed);
+    myCar_3.drive(180, 5);
+    myCar_3.logDriver();
+
+    console.log(myCar_4.maxSpeed);
+    myCar_4.drive(170, 5);
+    myCar_4.logDriver();
+
+##### Output:
+
+- 200
+- 1000
+- Driver Name: DK-1
+<br><br>
+- 190
+- 950
+- Driver Name: DK-2
+<br><br>
+- 180
+- 900
+- Driver Name: DK-3
+<br><br>
+- 170
+- 850
+- Driver Name: DK-4
+  
+#### Explanation
+
+- Constructor name starts with Capital letter generally
 
 ---
 <br>
 
 
 
-### 
+### Date Object
 
 #### Code
 
-##### index.html
-
-
 ##### test.js
-    
+    var myDate = new Date();
+    var myPastDate = new Date(2022, 7, 21, 10, 30, 15);
+    var myFutureDate = new Date(2026, 1, 21, 20, 40, 30);
+    console.log(myDate);
+    console.log(myPastDate);
+    console.log(myFutureDate);
+
+
+    var birthday_1 = new Date(2002, 1, 13, 11, 15, 25);
+    var birthday_2 = new Date(2002, 1, 13, 11, 15, 25);
+
+    //Methods
+
+    //gets the month of the date (0-11)
+    console.log(birthday_1.getMonth());
+
+    //gets the full year (YYYY)
+    console.log(birthday_1.getFullYear());
+
+    //gets the date of the month (1-31)
+    console.log(birthday_1.getDate());
+
+    //gets the day of the week (0-6)
+    console.log(birthday_1.getDay());
+
+    //gets the hour of the date (0-23)
+    console.log(birthday_1.getHours());
+
+    //gets the milliseconds since 13th of Feb (the most used)
+    console.log(birthday_1.getTime());
+
+    //Comparing Birthday Objects
+    if (birthday_1===birthday_2){
+        console.log("You were born at the same time")
+    }
+    else{
+        console.log("You weren't born at the same time")
+    }
+
+    //Comparing Birthday Time
+    if (birthday_1.getTime()===birthday_2.getTime()){
+        console.log("You were born at the same time")
+    }
+    else{
+        console.log("You weren't born at the same time")
+    }
+
+##### Output:
+
+- Thu Aug 17 2023 14:41:40 GMT+0500 (Pakistan Standard Time)
+- Sun Aug 21 2022 10:30:15 GMT+0500 (Pakistan Standard Time)
+- Sat Feb 21 2026 20:40:30 GMT+0500 (Pakistan Standard Time)
+<br><br>
+- 1
+- 2002
+- 13
+- 3
+- 11
+- 1013580925000
+- You weren't born at the same time
+- You were born at the same time
+
+#### Explanation
+
+- `Date` is an in built object of JS
 
 ---
 <br>

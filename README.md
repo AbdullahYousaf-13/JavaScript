@@ -70,6 +70,78 @@
 
 
 
+### Simple HTML & CSS Webpage
+
+#### Code
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple Web Page</title>
+        <style>
+            /* CSS styles go here */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 0;
+            }
+            
+            header {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            nav {
+                background-color: #444;
+                text-align: center;
+                padding: 10px;
+            }
+            
+            nav a {
+                text-decoration: none;
+                color: #fff;
+                margin: 10px;
+            }
+            
+            nav a:hover {
+                text-decoration: underline;
+            }
+            
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Simple Web Page</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="container">
+            <h2>Welcome to Our Website</h2>
+            <p>This is a simple HTML and CSS web page.</p>
+        </div>
+    </body>
+    </html>
+
+---
+<br>
+
+
+
 ### Using Another File for Script
 
 #### Code
@@ -1039,6 +1111,79 @@ AB (Writes to console)
 
 
 
+### DOM
+
+#### Explanation
+
+- DOM: Document Object Model
+
+- Application programing interface
+
+- We use DOM when we interact wit web pages
+
+- Adds content to HTML document
+
+- Deletes content from HTML document
+
+- Changes content in HTML document
+
+- Components:
+
+    - Document: Doc is just the web page and generally is an HTML doc
+    
+    - eg:
+    ![Alt text](image-1.png)
+
+    - Object: Every Element in HTML is pretty much an object to DOM
+
+    - eg:
+    ![Alt text](image-2.png)
+
+    - Model: Describes how these objects are lay down in a tree fashion
+    
+    - eg:
+    ![Alt text](image.png)
+
+- Everything that can be changed is a node. eg: elements, text within elements, HTML attributes
+
+- Things we do with DOM:
+![Alt text](image-3.png)
+---
+<br>
+
+
+
+### Traversing DOM
+
+#### Explanation
+
+- Methods: There are 3 methods by which we can grab nodes or contents and store them in Variables
+
+    - Class Method:
+        - `document.getElementByClassName("ClassName");` returns an array of `classNames`
+
+        - `var myClassNameDivs = document.getElementByClassName("className");` stores in variable `classNameDivs`
+
+        - now we can call methods and properties on this variable `classNameDivs`
+
+    - Tag Method:
+
+        - `var myHeadingNAme = classNameDivs[index].getElementsByTagName("headingName");` grabs `headingName` and stores it in `myHeadingNAme`
+
+        - `myHeadingNAme[index].innerHTML = "What Ever You want to write";` Chenges the specified content
+
+    - Id Method:
+        - `document.getElementById("Id");` returns element of the id `Id`
+
+        - Ids are unique so it returns only one element
+
+
+
+---
+<br>
+
+
+
 ### 
 
 #### Code
@@ -1047,7 +1192,11 @@ AB (Writes to console)
 
 
 ##### test.js
-    
+
+
+#### Explanation
+
+- 
 
 ---
 <br>

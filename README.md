@@ -30,8 +30,7 @@
 
 ### USing Chrome Developer Tools
     To Open: F12
-
-![Alt text](image-1.png)
+![Alt text](Images/image-1.png)
 
 ---
 ---
@@ -1132,22 +1131,22 @@ AB (Writes to console)
     - Document: Doc is just the web page and generally is an HTML doc
     
     - eg:
-    ![Alt text](image-1.png)
+    ![Alt text](Images/image-2.1.png)
 
     - Object: Every Element in HTML is pretty much an object to DOM
 
     - eg:
-    ![Alt text](image-2.png)
+    ![Alt text](Images/image-2.2.png)
 
     - Model: Describes how these objects are lay down in a tree fashion
     
     - eg:
-    ![Alt text](image.png)
+    ![Alt text](Images/image-2.3.png)
 
 - Everything that can be changed is a node. eg: elements, text within elements, HTML attributes
 
 - Things we do with DOM:
-![Alt text](image-3.png)
+![Alt text](Images/image-2.4.png)
 ---
 <br>
 
@@ -1178,6 +1177,25 @@ AB (Writes to console)
         - Ids are unique so it returns only one element
 
 
+
+---
+<br>
+
+
+
+### Changing Page Content
+
+#### Code
+
+##### index.html
+
+
+##### test.js
+
+
+#### Explanation
+
+- 
 
 ---
 <br>

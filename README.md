@@ -1187,15 +1187,99 @@ AB (Writes to console)
 
 #### Code
 
-##### index.html
+    var myBody = document.getElementsByTagName("body");
+    undefined
+
+    myBody
+    HTMLCollection [body]0: bodylength: 1[[Prototype]]: HTMLCollection
+
+    myBody[0].innerHTML = "<p>I am a paragraph</p>"; 
+    '<p>I am a paragraph</p>'
 
 
-##### test.js
+    var myTitle = document.getElementById("page-title");
+    undefined
+
+    myTitle
+    <h2 id=​"page-title">​ Welcome to Our Website​</h2>
+    ​
+    myTitle.textContent
+    ' Welcome to Our Website'
+
+    myTitle.textContent = "BYE";
+    'BYE'
 
 
 #### Explanation
 
-- 
+- Two properties are used to change content of your webpage:
+
+    - `innerHTML` property is used to change HTML of tag in the page
+
+    - `textContent` property is used to change only text of desired tag in the page
+
+---
+<br>
+
+
+
+### Changing Element Attributes
+
+#### Code
+
+//Methods
+
+var link = document.getElementById("test");
+undefined
+
+//get attributes/methods
+
+link
+<a href=​"#" id=​"test" class=​"ninja">​Home​</a>​
+
+link.getAttribute("href");
+'#'
+
+link.getAttribute("class");
+'ninja'
+
+
+//set attributes/methods
+
+link.setAttribute("class", "pie");
+undefined
+
+link.setAttribute("alt", "hello");
+undefined
+
+link
+<a href=​"#" id=​"test" class=​"pie" alt=​"hello">​Home​</a>​
+
+
+//Properties
+
+link.className;
+'pie'
+
+ink.className = "Ninja";
+'Ninja'
+
+
+#### Explanation
+
+- Properties and Methods behaves differently
+
+- eg: 
+
+    - Method: 
+
+            link.getAttribute("href");
+            '#'
+
+    - Property: 
+
+            link.href;
+            'file:///E:/Programing/JavaScript/index.html#'
 
 ---
 <br>
@@ -1218,5 +1302,3 @@ AB (Writes to console)
 
 ---
 <br>
-
-

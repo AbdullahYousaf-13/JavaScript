@@ -1,6 +1,5 @@
 # JavaScript
----
-<br><br><br>
+<br>
 
 ## Theory
 <br>
@@ -133,6 +132,83 @@
             <h2>Welcome to Our Website</h2>
             <p>This is a simple HTML and CSS web page.</p>
         </div>
+    </body>
+    </html>
+
+---
+<br>
+
+
+
+### HTML & CSS Webpage with Onclick Button
+
+#### Code
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple Web Page with Show More</title>
+        <style>
+            body {
+                background: #eee;
+            }
+
+            #content {
+                width: 400px;
+                background: #fff;
+                padding: 20px;
+                padding-top: 0px;
+                font-family: calibar;
+                font-size: 18px;
+                color: #444;
+                margin: 0 auto;
+
+                max-height: 240px;;
+                overflow: hidden;
+
+                /*Set Transitions up*/
+                -webkit-transition: max-height 0.7s;
+                -moz-transition: max-height 0.7s;
+                transition: max-height 0.7s;
+            }
+
+            #content.open {
+                max-height: 1000px;
+
+                /*Set Transitions up*/
+                -webkit-transition: max-height 0.7s;
+                -moz-transition: max-height 0.7s;
+                transition: max-height 0.7s;
+            }
+
+            #show-more {
+                background: #1594e5;
+                color: #fff;
+                font-family: #fff;
+                display: block;
+                width: 140px;
+                font-size: 20px;
+                text-transform: uppercase;
+                padding: 10px;
+                text-align: center;
+                margin: 20px auto;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula arcu non justo feugiat, at volutpat arcu rhoncus.</p>
+            <p>Phasellus eget est eu odio varius hendrerit id vel justo. Sed id nisi et odio lacinia feugiat. Fusce at diam eget justo aliquam fermentum.</p>
+            <p>Proin eget justo a nulla vestibulum fringilla. Duis vehicula leo a libero facilisis fringilla. In hac habitasse platea dictumst.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula arcu non justo feugiat, at volutpat arcu rhoncus.</p>
+            <p>Phasellus eget est eu odio varius hendrerit id vel justo. Sed id nisi et odio lacinia feugiat. Fusce at diam eget justo aliquam fermentum.</p>
+            <p>Proin eget justo a nulla vestibulum fringilla. Duis vehicula leo a libero facilisis fringilla. In hac habitasse platea dictumst.</p>
+        </div>
+        <a id="show-more">Show More</a>
+
+        <script src = "test.js"></script>
     </body>
     </html>
 
@@ -1227,42 +1303,42 @@ AB (Writes to console)
 
 #### Code
 
-//Methods
+    //Methods
 
-var link = document.getElementById("test");
-undefined
+    var link = document.getElementById("test");
+    undefined
 
-//get attributes/methods
+    //get attributes/methods
 
-link
-<a href=​"#" id=​"test" class=​"ninja">​Home​</a>​
+    link
+    <a href=​"#" id=​"test" class=​"ninja">​Home​</a>​
 
-link.getAttribute("href");
-'#'
+    link.getAttribute("href");
+    '#'
 
-link.getAttribute("class");
-'ninja'
-
-
-//set attributes/methods
-
-link.setAttribute("class", "pie");
-undefined
-
-link.setAttribute("alt", "hello");
-undefined
-
-link
-<a href=​"#" id=​"test" class=​"pie" alt=​"hello">​Home​</a>​
+    link.getAttribute("class");
+    'ninja'
 
 
-//Properties
+    //set attributes/methods
 
-link.className;
-'pie'
+    link.setAttribute("class", "pie");
+    undefined
 
-ink.className = "Ninja";
-'Ninja'
+    link.setAttribute("alt", "hello");
+    undefined
+
+    link
+    <a href=​"#" id=​"test" class=​"pie" alt=​"hello">​Home​</a>​
+
+
+    //Properties
+
+    link.className;
+    'pie'
+
+    ink.className = "Ninja";
+    'Ninja'
 
 
 #### Explanation
@@ -1280,6 +1356,226 @@ ink.className = "Ninja";
 
             link.href;
             'file:///E:/Programing/JavaScript/index.html#'
+
+---
+<br>
+
+
+
+### Changing CSS Styles
+
+#### Code
+
+    //Methods
+
+    var title = document.getElementById("page-title");
+    undefined
+
+    title.setAttribute("style", "position: relative;");
+    undefined
+
+    title.setAttribute("style", "left: 10px;");
+    undefined
+
+    title.setAttribute("style", "position: relative; left: 10px;");
+    undefined
+
+
+    //Properties
+
+    title.style.left = "20px";
+    '20px'
+
+    itle.style.top = "10px";
+    '10px'
+
+    title.style.color = "red";
+    'red'
+
+    title.style.backgroundColor = "Black";
+    'Black'
+
+
+#### Explanation
+
+- If we add styles through methods seperately it would override the older one
+
+- In order to add multiple styles we have to add them in a single value parameter
+
+- If we add styles through properties seperately it would keep adding the new ones along with the older ones
+
+---
+<br>
+
+
+
+### Adding Elements to the DOM
+
+#### Code
+
+    var newA = document.createElement("a");
+    undefined
+
+    newA
+    <a>​</a>
+
+    var links = document.getElementById("links-nav");
+    undefined
+
+    links
+    <nav id=​"links-nav">​…​</nav>​<a href=​"#" id=​"test" class=​"ninja">​Home​</a>​<a href=​"#">​About​</a>​<a href=​"#">​Services​</a>​<a href=​"#">​Contact​</a>​</nav>
+    ​
+    links.appendChild(newA);
+    <a>​</a>​
+
+    newA.innerHTML = "Blog";
+    'Blog'
+
+
+    //For inserting at desired position
+
+    links.insertBefore(newA, links.getElementsByTagName("a")[0]);
+    <a>​Blog​</a>​
+
+---
+<br>
+
+
+
+### Removing Elements from the DOM
+
+#### Code
+
+var parent = document.getElementById("links-nav");
+undefined
+
+parent
+<nav id=​"links-nav">​…​</nav>​<a>​Blog​</a>​<a href=​"#" id=​"test" class=​"ninja">​Home​</a>​<a href=​"#">​About​</a>​<a href=​"#">​Services​</a>​<a href=​"#">​Contact​</a>​</nav>
+
+var child = parent.getElementsByTagName("a")[0];
+undefined
+
+child
+<a>​Blog​</a>
+
+var removed = parent.removeChild(child);​​undefined
+
+
+#### Explanation
+
+- We save the removed item in a variable so if needed we can add it again 
+
+---
+<br>
+
+
+
+### Intro to JavaScript Events
+
+#### Code
+
+var title = document.getElementById("page-title");
+undefined
+
+title.onclick = function(){
+    alert("You Clicked Me");
+};
+ƒ (){
+    alert("You Clicked Me");
+}
+
+title.onmouseover = function (){
+    alert("You hovered your mouse over me");
+};
+ƒ (){
+    alert("You hovered your mouse over me");
+}
+
+#### Explanation
+
+- Sometimes we need to execute a certain code when a certain thing has happened or some condition is met
+
+- These are called events
+
+- Anonymous function has no name
+
+---
+<br>
+
+
+
+### The onClick Event
+
+#### Code
+
+##### test.js
+    var content = document.getElementById("content");
+    var button = document.getElementById("show-more");
+
+    button.onclick = function(){
+        if(content.className == "open"){
+            //shrink the box
+            content.className = "";
+            button.innerHTML = "Show More";
+        }
+        else{
+            //expand the box
+            content.className = "open";
+            button.innerHTML = "Show Less";
+        }
+    }
+
+---
+<br>
+
+
+
+### Window onLoad Event
+
+#### Code
+
+##### test.js
+function setUpEvents(){
+    var content = document.getElementById("content");
+    var button = document.getElementById("show-more");
+    
+    button.onclick = function(){
+        if(content.className == "open"){
+            //shrink the box
+            content.className = "";
+            button.innerHTML = "Show More";
+        }
+        else{
+            //expand the box
+            content.className = "open";
+            button.innerHTML = "Show Less";
+        }
+    }
+}
+
+window.onload = function(){
+    setUpEvents();
+}
+
+#### Explanation
+
+- When the window is fully loaded then execute this function
+
+---
+<br>
+
+
+
+### JavaScript Timers
+
+#### Code
+
+##### test.js
+
+
+#### Explanation
+
+- 
 
 ---
 <br>

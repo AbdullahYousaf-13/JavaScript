@@ -1,69 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Simple Web Page with Show More</title>
-    <style>
-        body {
-            background: #eee;
-        }
-
-        #content {
-            width: 400px;
-            background: #fff;
-            padding: 20px;
-            padding-top: 0px;
-            font-family: calibar;
-            font-size: 18px;
-            color: #444;
-            margin: 0 auto;
-
-            opacity: 0;
-
-            max-height: 240px;;
-            overflow: hidden;
-
-            /*Set Transitions up*/
-            -webkit-transition: opacity 0.7s;
-            -moz-transition: opacity 0.7s;
-            transition: opacity 0.7s;
-        }
-
-        #content.open {
-            max-height: 1000px;
-
-            /*Set Transitions up*/
-            -webkit-transition: opacity 0.7s;
-            -moz-transition: opacity 0.7s;
-            transition: opacity 0.7s;
-        }
-
-        #show-more {
-            background: #1594e5;
-            color: #fff;
-            font-family: #fff;
-            display: block;
-            width: 140px;
-            font-size: 20px;
-            text-transform: uppercase;
-            padding: 10px;
-            text-align: center;
-            margin: 20px auto;
-            cursor: pointer;
-        }
-    </style>
+    <title>JavaScript Libraries</title>
 </head>
 <body>
-    <div id="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula arcu non justo feugiat, at volutpat arcu rhoncus.</p>
-        <p>Phasellus eget est eu odio varius hendrerit id vel justo. Sed id nisi et odio lacinia feugiat. Fusce at diam eget justo aliquam fermentum.</p>
-        <p>Proin eget justo a nulla vestibulum fringilla. Duis vehicula leo a libero facilisis fringilla. In hac habitasse platea dictumst.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula arcu non justo feugiat, at volutpat arcu rhoncus.</p>
-        <p>Phasellus eget est eu odio varius hendrerit id vel justo. Sed id nisi et odio lacinia feugiat. Fusce at diam eget justo aliquam fermentum.</p>
-        <p>Proin eget justo a nulla vestibulum fringilla. Duis vehicula leo a libero facilisis fringilla. In hac habitasse platea dictumst.</p>
-    </div>
-    <a id="show-more">Show More</a>
 
-    <script src = "test.js"></script>
+    <div id = "content">
+    <p>blah blah blah</p>
+    <p>blah blah blah</p>
+    <p>blah blah blah</p>
+    <p>blah blah blah</p>
+    <p>blah blah blah</p>
+    <p>Grab Me</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="test.js"></script>
 </body>
 </html>

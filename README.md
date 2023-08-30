@@ -217,6 +217,44 @@
 
 
 
+### Simple HTML Form
+
+#### Code
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Simple Form Example</title>
+    </head>
+    <body>
+        <form id = "my-form" name = "myForm" action="#">
+            <label for="name">Name:</label>
+            <input type="text" name="name"><br/>
+
+            <label>Hobbies:</label><br/>
+            <input type="checkbox" name="biking" value="biking">Biking<br/>
+            <input type="checkbox" name="diving" value="diving">Diving<br/>
+            <input type="checkbox" name="sking" value="sking">Sking<br/>
+
+            <label for="colour">Fav Colour:</label>
+            <select name="colour">
+                <option>Red</option>
+                <option>Green</option>
+                <option>Blue</option>
+            </select>
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+
+        <script src="test.js"></script>
+    </body>
+    </html>
+
+---
+<br>
+
+
+
 ### Using Another File for Script
 
 #### Code
@@ -742,6 +780,7 @@ AB (Writes to console)
 #### Code
 
 ##### test.js
+
     var str1 = "I am x 'function-1' string";
     console.log(str1);
     var str2 = 'I am "function-2" string';
@@ -853,7 +892,6 @@ AB (Writes to console)
 ### Arrays 
 
 #### Code
-
 
     //Declaring and initializing arrays
 
@@ -1001,6 +1039,7 @@ AB (Writes to console)
 #### Code
 
 ##### test.js
+
     var myCar_1 = {
         maxSpeed: 200,
         driver: "DK",
@@ -1051,6 +1090,7 @@ AB (Writes to console)
 #### Code
 
 ##### test.js
+
     var Car = function(maxSpeed, driver){
         this.maxSpeed = maxSpeed;
         this.driver = driver;
@@ -1115,6 +1155,7 @@ AB (Writes to console)
 #### Code
 
 ##### test.js
+
     var myDate = new Date();
     var myPastDate = new Date(2022, 7, 21, 10, 30, 15);
     var myFutureDate = new Date(2026, 1, 21, 20, 40, 30);
@@ -1446,20 +1487,19 @@ AB (Writes to console)
 
 #### Code
 
-var parent = document.getElementById("links-nav");
-undefined
+    var parent = document.getElementById("links-nav");
+    undefined
 
-parent
-<nav id=​"links-nav">​…​</nav>​<a>​Blog​</a>​<a href=​"#" id=​"test" class=​"ninja">​Home​</a>​<a href=​"#">​About​</a>​<a href=​"#">​Services​</a>​<a href=​"#">​Contact​</a>​</nav>
+    parent
+    <nav id=​"links-nav">​…​</nav>​<a>​Blog​</a>​<a href=​"#" id=​"test" class=​"ninja">​Home​</a>​<a href=​"#">​About​</a>​<a href=​"#">​Services​</a>​<a href=​"#">​Contact​</a>​</nav>
 
-var child = parent.getElementsByTagName("a")[0];
-undefined
+    var child = parent.getElementsByTagName("a")[0];
+    undefined
 
-child
-<a>​Blog​</a>
+    child
+    <a>​Blog​</a>
 
-var removed = parent.removeChild(child);​​undefined
-
+    var removed = parent.removeChild(child);​​undefined
 
 #### Explanation
 
@@ -1474,22 +1514,22 @@ var removed = parent.removeChild(child);​​undefined
 
 #### Code
 
-var title = document.getElementById("page-title");
-undefined
+    var title = document.getElementById("page-title");
+    undefined
 
-title.onclick = function(){
-    alert("You Clicked Me");
-};
-ƒ (){
-    alert("You Clicked Me");
-}
+    title.onclick = function(){
+        alert("You Clicked Me");
+    };
+    ƒ (){
+        alert("You Clicked Me");
+    }
 
-title.onmouseover = function (){
-    alert("You hovered your mouse over me");
-};
-ƒ (){
-    alert("You hovered your mouse over me");
-}
+    title.onmouseover = function (){
+        alert("You hovered your mouse over me");
+    };
+    ƒ (){
+        alert("You hovered your mouse over me");
+    }
 
 #### Explanation
 
@@ -1509,6 +1549,7 @@ title.onmouseover = function (){
 #### Code
 
 ##### test.js
+   
     var content = document.getElementById("content");
     var button = document.getElementById("show-more");
 
@@ -1535,27 +1576,28 @@ title.onmouseover = function (){
 #### Code
 
 ##### test.js
-function setUpEvents(){
-    var content = document.getElementById("content");
-    var button = document.getElementById("show-more");
-    
-    button.onclick = function(){
-        if(content.className == "open"){
-            //shrink the box
-            content.className = "";
-            button.innerHTML = "Show More";
-        }
-        else{
-            //expand the box
-            content.className = "open";
-            button.innerHTML = "Show Less";
+   
+    function setUpEvents(){
+        var content = document.getElementById("content");
+        var button = document.getElementById("show-more");
+        
+        button.onclick = function(){
+            if(content.className == "open"){
+                //shrink the box
+                content.className = "";
+                button.innerHTML = "Show More";
+            }
+            else{
+                //expand the box
+                content.className = "open";
+                button.innerHTML = "Show Less";
+            }
         }
     }
-}
 
-window.onload = function(){
-    setUpEvents();
-}
+    window.onload = function(){
+        setUpEvents();
+    }
 
 #### Explanation
 
@@ -1570,31 +1612,252 @@ window.onload = function(){
 
 #### Code
 
+##### index.html
+   
+    //Changes Made
+    #content {
+            width: 400px;
+            background: #ddaaaa;
+            padding: 20px;
+            padding: 20px;
+            font-family: calibar;
+            font-size: 18px;
+            color: #444;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #ff7777;
+            font-weight: bold;
+            opacity: 0;
+
+            /*Set Transitions up*/
+            -webkit-transition: opacity 0.7s;
+            -moz-transition: opacity 0.7s;
+            transition: opacity 0.7s;
+        }
+
+        #content.show {
+            opacity: 1;
+
+            /*Set Transitions up*/
+            -webkit-transition: opacity 0.7s;
+            -moz-transition: opacity 0.7s;
+            transition: opacity 0.7s;
+        }
+
+        #color-changer{
+            width: 200px;
+            height: 100px;
+            margin: 30px auto;
+            border: 1px solid #000;
+            background: #fff;
+
+            -webkit-transition: background 0.7s;
+            -moz-transition: background 0.7s;
+            transition: background 0.7s;
+        }
+
 ##### test.js
 
+    var content = document.getElementById("content");
+
+    function showContent(){
+        content.className = "show";
+    }
+    //Timer
+    setTimeout(showContent, 3000);
+
+
+    var colorChanger = document.getElementById("color-changer");
+    var colours = ["pink", "red", "blue", 'green'];
+    var counter = 0;
+
+    function changeColor(){
+        if(counter >= colours.length){
+            counter = 0;
+        }
+        colorChanger.style.background = colours[counter];
+        counter++;
+    }
+    //Timer
+    var myTimer = setInterval(changeColor, 3000);
+
+    //Stoping Timer
+    colorChanger.onclick = function(){
+        clearInterval(myTimer);
+        colorChanger.innerHTML = "Timer Stopped";
+    }
 
 #### Explanation
 
-- 
+- `setTimer` has two parameters:
+
+    - First one is function
+
+    - Second one is time in miliseconds
 
 ---
 <br>
 
 
 
-### 
+### Accessing from Elements
+
+#### Code
+
+    var myForm = document.forms.myForm;
+    undefined
+
+    myForm
+    <form id=​"my-form" name=​"myForm" action=​"#">​…​</form>​
+
+    myForm.name
+    <input type=​"text" name=​"name">​
+
+    myForm.name.value;
+    ''
+
+    myForm.name.value;
+    'DK'
+
+    myForm.colour.value;
+    'Red'
+
+    myForm.name.onfocus = function() {
+    myForm.name.style.border = "4px solid pink";
+    }
+    ƒ () {
+        myForm.name.style.border = "4px solid pink";
+    };
+
+    myForm.name.onblur = function() {
+        myForm.name.style.border = "none";
+    }
+    ƒ () {
+        myForm.name.style.border = "none";
+    };
+
+#### Explanation
+
+- We can use `onfocus` to do things when a certain field is focused
+
+---
+<br>
+
+
+
+### Simple Form Validation
 
 #### Code
 
 ##### index.html
 
+    //Changes made: Added before script tag
+    <div id="message" style="color: red;"></div>
 
 ##### test.js
 
+    var myForm = document.forms.myForm;
+    var message = document.getElementById("message");
+
+    myForm.onsubmit = function(){
+        if(myForm.name.value == ""){
+            message.innerHTML = "Please Enter a Name";
+            return false;
+        }
+        else{
+            message.innerHTML = "";
+            return true;
+        }
+    }
 
 #### Explanation
 
-- 
+- When we click 'submit' button it would communicate with the server and does some server side validation and return back a result
+
+- We can interrupt this process using the `onsubmit` event do some client side validation so if it is what we require then we do not need it to the server
+
+- `return false;` prevents form from being submitted
+
+---
+<br>
+
+
+
+### JaveScript Libraries
+
+#### Code
+
+    var myPara2 = $("#content p:last-child");
+    undefined
+
+    myPara2.addClass("test");
+    n.fn.init [p.test, prevObject: n.fn.init(1), context: document, selector: '#content p:last-child']
+
+    myPara2.removeClass("test");
+    n.fn.init [p, prevObject: n.fn.init(1), context: document, selector: '#content p:last-child']
+
+    myPara2.fadeOut();
+    n.fn.init [p, prevObject: n.fn.init(1), context: document, selector: '#content p:last-child']
+
+    myPara2.fadeIn();
+    n.fn.init [p, prevObject: n.fn.init(1), context: document, selector: '#content p:last-child']
+
+    myPara2.css({position: "relative", color: "red"});
+    n.fn.init [p, prevObject: n.fn.init(1), context: document, selector: '#content p:last-child']
+
+    myPara2.animate({left: "50px"});
+    n.fn.init [p, prevObject: n.fn.init(1), context: document, selector: '#content p:last-child']
+
+
+
+##### index.html
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>JavaScript Libraries</title>
+    </head>
+    <body>
+
+        <div id = "content">
+        <p>blah blah blah</p>
+        <p>blah blah blah</p>
+        <p>blah blah blah</p>
+        <p>blah blah blah</p>
+        <p>blah blah blah</p>
+        <p>Grab Me</p>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="test.js"></script>
+    </body>
+    </html>
+
+##### test.js
+    //Normal way
+    var myPara1 = document.getElementById("content").getElementsByTagName("p")[5];
+
+    //Using jQuery
+    var myPara2 = $("#content p:last-child");
+
+#### Explanation
+
+- JS libraries:
+![Alt text](Images/image-3.1.png)
+![Alt text](Images/image-3.2.png)
+![Alt text](Images/image-3.3.png)
+
+- If we want to add a feature to our web we do not need to code it by ourself
+we can use a library for it
+
+- Most popular: jQuery
+
+- We can use it by linking to a CDN version of the file
+
+- Go to 'jQuery' web page, then go to 'Using jQuery with a CDN' section, then click on 'https://releases.jquery.com' or 'sourcemap files', then in in the 'jQuery 1.x' section click on the 'minified' link, then copy the url
+
+- Paste the link in 'html' file above js file
+
+![Alt text](Images/image-4.png)
 
 ---
 <br>

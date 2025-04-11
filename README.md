@@ -574,12 +574,12 @@ AB (Writes to console)
 
     <html>  
         <body>
-            <a href="Images/image.png">Link 1</a>
-            <a href="Images/image.png">Link 2</a>
-            <a href="Images/image.png">Link 3</a>
-            <a href="Images/image.png">Link 4</a>
-            <a href="Images/image.png">Link 5</a>
-            <a href="Images/image.png">Link 6</a>
+            <a href="Images/image-1.png">Link 1</a>
+            <a href="Images/image-2.1.png">Link 2</a>
+            <a href="Images/image-3.1.png">Link 3</a>
+            <a href="Images/image-4.png">Link 4</a>
+            <a href="Images/image-2.2.png">Link 5</a>
+            <a href="Images/image-3.2.png">Link 6</a>
             <script src="test.js"> </script>
         </body>
     </html>
